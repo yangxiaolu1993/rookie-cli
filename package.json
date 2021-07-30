@@ -2,20 +2,20 @@
   "name": "rookie-cli",
   "version": "1.0.0",
   "description": "创建属于自己的 Vue 脚手架",
-  "main": "index.js",
-  "bin":{
-    "rookie-cli":"./bin/index.js"
+  "main": "./dist_cli/bin/index.js",
+  "bin": {
+    "rookie-cli": "./dist_cli/bin/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsc --watch --incremental"
   },
   "dependencies": {
     "chalk": "^2.4.2",
-    "commander": "^2.19.0",
+    "commander": "^4.0.1",
     "download-git-repo": "^1.1.0",
-    "inquirer": "^6.2.2",
+    "inquirer": "^7.0.3",
     "ora": "^3.2.0"
-   },
+  },
   "keywords": [
     "cli"
   ],

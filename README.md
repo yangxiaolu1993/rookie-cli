@@ -8,3 +8,10 @@ package.json 中
  
  npm link 把 bin 中设置的命令挂载到全局
  npm unlink 解绑全局命令
+
+
+ 创建过程中遇到的问题：
+
+ 1、js文件不能使用 import ，只能使用require ，解决将 js文件改为ts文件，并添加 tsconfig.json 文件
+ 2、npm unlink 删除全局配置的变量，若是失败，根据提示手动在 usr/local/bin/ 中直接删除
+ 
