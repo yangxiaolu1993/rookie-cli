@@ -1,8 +1,14 @@
 {
-  "name": "rookie-cli",
+  "name": "xl-rookie-cli",
   "version": "1.0.0",
   "description": "创建属于自己的 Vue 脚手架",
   "main": "./dist_cli/bin/index.js",
+  "private": false,
+  "files": [
+    "dist_cli",
+    "README.md",
+    "package.json"
+  ],
   "bin": {
     "rookie-cli": "./dist_cli/bin/index.js"
   },
