@@ -18,7 +18,7 @@ export async function add() {
 			name: "name",
 			type: 'input',
 			message: "请输入模板名称",
-			validate(val) {
+			validate(val:string) {
 				if (val === '') {
 					return 'Name is required!'
 				} else if (tplObj[val]) {
@@ -32,7 +32,7 @@ export async function add() {
 			name: "url",
 			type: 'input',
 			message: "请输入模板地址",
-			validate(val) {
+			validate(val:string) {
 				if (val === '') return 'The url is required!'
 				return true
 			}
@@ -40,13 +40,16 @@ export async function add() {
 	]
 
 	inquirer
-		.prompt(question).then(answers => {
+		.prompt(question).then((answers:{
+			name:any,
+			url:String
+		}) => {
 			// answers 就是用户输入的内容，是个对象
 			let { name, url } = answers;
 			// 过滤 unicode 字符
 			tplObj[name] = url.replace(/[\u0000-\u0019]/g, '')
 			// 把模板信息写入 template.json 文件中
-			fs.writeFile(tplObj, JSON.stringify(tplObj), 'utf-8', err => {
+			fs.writeFile(tplObj, JSON.stringify(tplObj), 'utf-8', (err:any) => {
 				if (err) console.log(err)
 				console.log('\n')
 				console.log(chalk.green('Added successfully!\n'))

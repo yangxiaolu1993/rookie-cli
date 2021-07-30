@@ -322,7 +322,7 @@
         "signature": "963c2fb402e1667a9d588caf625c4f9fab19d96f27f36ab99706ff00200e86d7"
       },
       "../src/commands/add.ts": {
-        "version": "2abe9995a80577939dd41baa708c2aebba95bc49cb696e0f6bf4deda800ca5c0",
+        "version": "41eebfc096f0e1b331cf306a1409b721477f673c037d43b136de7468ba4f5fd4",
         "signature": "6c90aadf8f6757f571c3bbee59f41e7ddd2b45257eef0dd82e4b02bd2a0f30ac"
       },
       "../src/commands/create.ts": {
@@ -3971,43 +3971,7 @@
       "../../../../../node_modules/@types/node/base.d.ts",
       "../../../../../node_modules/@types/node/index.d.ts",
       "../node_modules/commander/typings/index.d.ts",
-      [
-        "../src/commands/add.ts",
-        [
-          {
-            "file": "../src/commands/add.ts",
-            "start": 404,
-            "length": 3,
-            "messageText": "Parameter 'val' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/commands/add.ts",
-            "start": 658,
-            "length": 3,
-            "messageText": "Parameter 'val' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/commands/add.ts",
-            "start": 779,
-            "length": 7,
-            "messageText": "Parameter 'answers' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          },
-          {
-            "file": "../src/commands/add.ts",
-            "start": 1016,
-            "length": 3,
-            "messageText": "Parameter 'err' implicitly has an 'any' type.",
-            "category": 1,
-            "code": 7006
-          }
-        ]
-      ],
+      "../src/commands/create.ts",
       "../src/bin/index.ts",
       "../../../../../node_modules/@types/accepts/index.d.ts",
       "../../../../../node_modules/@types/connect/index.d.ts",
@@ -4249,7 +4213,7 @@
       "../../../../../node_modules/@types/normalize-package-data/index.d.ts",
       "../../../../../node_modules/@types/ws/index.d.ts",
       "../../../../../node_modules/@types/zen-observable/index.d.ts",
-      "../src/commands/create.ts"
+      "../src/commands/add.ts"
     ]
   },
   "version": "3.8.3"
