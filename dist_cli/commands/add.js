@@ -82,8 +82,9 @@ function add() {
                 var name = answers.name, url = answers.url;
                 // 过滤 unicode 字符
                 tplObj[name] = url.replace(/[\u0000-\u0019]/g, '');
+                console.log(tplObj[name]);
                 // 把模板信息写入 template.json 文件中
-                fs.writeFile(tplObj, JSON.stringify(tplObj), 'utf-8', function (err) {
+                fs.writeFile(path_1.ROOT_CLI_PATH('template.json'), JSON.stringify(tplObj), 'utf-8', function (err) {
                     if (err)
                         console.log(err);
                     console.log('\n');

@@ -322,7 +322,7 @@
         "signature": "963c2fb402e1667a9d588caf625c4f9fab19d96f27f36ab99706ff00200e86d7"
       },
       "../src/commands/add.ts": {
-        "version": "41eebfc096f0e1b331cf306a1409b721477f673c037d43b136de7468ba4f5fd4",
+        "version": "fc9467d97df992d823bb6a15692764a5abcd607565da665993580d5625474e6a",
         "signature": "6c90aadf8f6757f571c3bbee59f41e7ddd2b45257eef0dd82e4b02bd2a0f30ac"
       },
       "../src/commands/create.ts": {

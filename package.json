@@ -17,9 +17,9 @@
   },
   "dependencies": {
     "chalk": "^2.4.2",
-    "commander": "^4.0.1",
+    "commander": "^4.1.1",
     "download-git-repo": "^1.1.0",
-    "inquirer": "^7.0.3",
+    "inquirer": "^7.3.3",
     "ora": "^3.2.0"
   },
   "keywords": [
