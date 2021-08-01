@@ -1,33 +1,50 @@
 {
-  "name": "xl-rookie-cli",
-  "version": "1.0.0",
-  "description": "创建属于自己的 Vue 脚手架",
-  "main": "./dist_cli/bin/index.js",
-  "private": false,
-  "files": [
-    "dist_cli",
-    "README.md",
-    "package.json"
-  ],
-  "bin": {
-    "rookie-cli": "./dist_cli/bin/index.js"
-  },
+  "name": "template",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "tsc --watch --incremental"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "chalk": "^2.4.2",
-    "commander": "^4.1.1",
-    "download-git-repo": "^1.1.0",
-    "inquirer": "^7.3.3",
-    "ora": "^3.2.0"
+    "@nutui/nutui": "^2.2.12",
+    "core-js": "^3.6.5",
+    "sass": "^1.37.0",
+    "vue": "^2.6.11",
+    "vue-router": "^3.5.2"
   },
-  "keywords": [
-    "cli"
-  ],
-  "author": "yangxiaolu",
-  "license": "ISC",
   "devDependencies": {
-    "@types/node": "^16.4.9"
-  }
+    "@nutui/babel-plugin-separate-import": "^1.2.2",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "css-loader": "^3.6.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^7.1.0",
+    "sass-resources-loader": "^2.0.3",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
