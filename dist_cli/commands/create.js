@@ -42,11 +42,35 @@ var inquirer = require('inquirer');
 // 修改控制台字符串的样式
 var chalk = require('chalk');
 // node 内置文件模块
-var fs = require('fs');
+var os = require('os');
+var path = require('path');
+var ora = require('ora');
+var download = require('download-git-repo');
+var path_1 = require("../utils/path");
 function create(project) {
     return __awaiter(this, void 0, void 0, function () {
+        var tplObj, tmpdir, url, spinner;
         return __generator(this, function (_a) {
             console.log("use rookie-cli create " + project);
+            tplObj = path_1.ROOT_CLI_PATH('template');
+            tmpdir = path.join(path_1.ROOT_CLI_PATH(''), '', project);
+            url = 'https://github.com:yangxiaolu1993/rookie-cli#master';
+            spinner = ora("Downloading...");
+            spinner.start();
+            console.log(tmpdir);
+            // 执行下载方法并传入参数
+            download(url, project, { clone: true }, function (err) {
+                if (err) {
+                    spinner.fail();
+                    console.log(chalk.red("Generation failed. " + err));
+                    return;
+                }
+                // 结束加载图标
+                spinner.succeed();
+                console.log(chalk.green('\n Generation completed!'));
+                console.log('\n To get started');
+                console.log("\n cd " + project + " \n");
+            });
             return [2 /*return*/];
         });
     });
