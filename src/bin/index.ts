@@ -6,6 +6,7 @@ import { add } from '../commands/add'
 import { create } from '../commands/create'
 
 
+
 // 定义当前版本
 program
     .version(require(ROOT_CLI_PATH('package')).version)
@@ -18,7 +19,7 @@ program
     .command('create <project>')
     .description('初始化项目模板')
     .action(function (projectname) {
-        create(projectname)
+        create(program)
     })
 
 program

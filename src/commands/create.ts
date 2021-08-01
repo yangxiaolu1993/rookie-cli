@@ -11,23 +11,34 @@ const download = require('download-git-repo')
 
 import { ROOT_CLI_PATH } from '../utils/path'
 
-export async function create(project: string) {
+export async function create(program: {
+	args:string[]
+}) {
+	// 读取根目录下的模板列表
+	const tplObj = require(ROOT_CLI_PATH('template'))
+	
+	let templateName = program.args[0]
+	let projectName = program.args[1]
+	// 小小校验一下参数
+	if (!tplObj[templateName]) {
+		console.log(chalk.red('\n Template does not exit! \n '))
+		return
+	}
+	if (!projectName) {
+		console.log(chalk.red('\n Project should not be empty! \n '))
+		return
+	}
 
-	console.log(`use rookie-cli create ${project}`)
+	console.log(`use rookie-cli create ${projectName}`)
 
-	// 读取根目录下的 template
-	const tplObj = ROOT_CLI_PATH('template')
-
-	const tmpdir = path.join(ROOT_CLI_PATH(''), '', project)
-
-	let url = 'https://github.com:yangxiaolu1993/rookie-cli#rookie-cli-template'
+	let url = tplObj[templateName]
 	const spinner = ora("Downloading...");
 	spinner.start();
 
 	// 执行下载方法并传入参数
 	download(
 		url,
-		project,
+		projectName,
 		{ clone: true },
 		(err: any) => {
 			if (err) {
@@ -39,7 +50,7 @@ export async function create(project: string) {
 			spinner.succeed();
 			console.log(chalk.green('\n Generation completed!'))
 			console.log('\n To get started')
-			console.log(`\n cd ${project} \n`)
+			console.log(`\n cd ${projectName} \n`)
 		}
 	)
 }
