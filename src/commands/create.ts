@@ -10,7 +10,6 @@ const ora = require('ora')
 const download = require('download-git-repo')
 
 import { ROOT_CLI_PATH } from '../utils/path'
-import { template } from '../utils/template'
 
 export async function create(program: {
 	args:string[]
