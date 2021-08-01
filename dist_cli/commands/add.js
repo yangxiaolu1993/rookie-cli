@@ -36,6 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.add = void 0;
 // 交互式命令行
 var inquirer = require('inquirer');
 // 修改控制台字符串的样式

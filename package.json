@@ -20,11 +20,14 @@
     "commander": "^4.1.1",
     "download-git-repo": "^1.1.0",
     "inquirer": "^7.3.3",
-    "ora": "^3.2.0"
+    "ora": "^3.2.0",
   },
   "keywords": [
     "cli"
   ],
   "author": "yangxiaolu",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^16.4.9"
+  }
 }
