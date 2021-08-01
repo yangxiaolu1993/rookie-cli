@@ -16,7 +16,7 @@ program
 
 // 定义四个指令
 program
-    .command('create <project>')
+    .command('create <template> <project> ')
     .description('初始化项目模板')
     .action(function (projectname) {
         create(program)

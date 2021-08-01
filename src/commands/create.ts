@@ -10,7 +10,7 @@ const ora = require('ora')
 const download = require('download-git-repo')
 
 import { ROOT_CLI_PATH } from '../utils/path'
-// import { template } from '../template'
+import { template } from '../utils/template'
 
 export async function create(program: {
 	args:string[]
@@ -19,7 +19,7 @@ export async function create(program: {
 	const tplObj = require(ROOT_CLI_PATH('template'))
 	
 	let templateName = program.args[0]
-	let projectName = program.args[0]
+	let projectName = program.args[1]
 	// 小小校验一下参数
 	if (!tplObj[templateName]) {
 		console.log(chalk.red('\n Template does not exit! \n '))
@@ -32,7 +32,7 @@ export async function create(program: {
 
 	console.log(`use rookie-cli create ${projectName}`)
 
-	let url = 'https://github.com:yangxiaolu1993/rookie-cli#rookie-cli-template'
+	let url = tplObj[templateName]
 	const spinner = ora("Downloading...");
 	spinner.start();
 
