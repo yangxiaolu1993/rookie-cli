@@ -20,11 +20,10 @@ export async function create(project: string) {
 
 	const tmpdir = path.join(ROOT_CLI_PATH(''), '', project)
 
-	let url = 'https://github.com:yangxiaolu1993/rookie-cli#master'
+	let url = 'https://github.com:yangxiaolu1993/rookie-cli#rookie-cli-template'
 	const spinner = ora("Downloading...");
 	spinner.start();
 
-	console.log(tmpdir)
 	// 执行下载方法并传入参数
 	download(
 		url,
