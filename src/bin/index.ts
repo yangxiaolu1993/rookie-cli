@@ -11,8 +11,6 @@ import { create } from '../commands/create'
 program
     .version(require(ROOT_CLI_PATH('package')).version)
     .usage('<command> [options]')
-    .command('delete', 'delete a template')
-    .command('list', 'list all the templates')
 
 // 定义四个指令
 program
