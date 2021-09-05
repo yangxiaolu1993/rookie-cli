@@ -1,19 +1,11 @@
-Rookie CLI 主要用于开发自己的 Vue 项目时，省去搭建项目的过程。
+# Vue 3 + Typescript + Vite
 
-## 命令
+This template should help get you started developing with Vue 3 and Typescript in Vite.
 
-### -V
+## Recommended IDE Setup
 
-查看版本号
+- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 
-### -h
+## Type Support For `.vue` Imports in TS
 
-查看提供的所有命令
-### create <template> <project> 初始化项目
-
-<template> 模板，可选：normal
-<project>  项目名称
-
-### add
-
-添加一个新的模板
+Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
