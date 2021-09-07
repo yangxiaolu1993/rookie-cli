@@ -1,15 +1,21 @@
 <script setup lang="ts">
+import { defineProps } from 'vue'
+import './index'
 
-defineProps<{ 
-    icon: string,
-    styles: Object 
-}>();
+const props = defineProps({
+    icon: String,
+    styles: {
+        type: Object,
+        default:()=>{},
+    }
+});
 
+console.log(props)
 
 </script>
 
 <template>
-    <svg class="icon" aria-hidden="true" @click="$emit('click',$event)" :style="styles">
+    <svg class="icon" aria-hidden="true"  :style="styles">
         <use :xlink:href="`#${icon}`" />
     </svg>
 </template>
@@ -17,12 +23,12 @@ defineProps<{
 
 <style scoped lang='scss'>
 .icon {
-  width: 15px;
-  height: 15px;
+  width: 30px;
+  height: 30px;
   vertical-align: middle;
   fill: currentColor;
   overflow: hidden;
-  margin-right: 4px;
+  margin-right: 8px;
 }
 </style>
 
