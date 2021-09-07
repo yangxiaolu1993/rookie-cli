@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import { ref ,reactive} from 'vue'
+import { randomNum } from '@/utils/utils'
 
 const list = reactive([
-  {id:'6',title:'创建 demo ',desc:'详情描述 demo 做了哪些事情 ',route:'home',icon:'6.jpg'}
+  {id:'6',title:'创建 demo ',desc:'详情描述 demo 做了哪些事情 ',route:'home',}
 ])
+
+// 获取可选 icon 图标
+const files = ref(Object.keys(import.meta.globEager('/public/img/*')))
 
 
 </script>
@@ -13,7 +17,7 @@ const list = reactive([
     <div class="home-title"><svg-icon icon='icon-naoling'></svg-icon>表单动态配置</div>
     <div class="group">
         <div class="group-list" v-for="(item,i) in list" :key="i" @click="jump(item)">
-            <div class="img"><img :src="`/public/img/${item.icon}`" alt=""></div>
+            <div class="img"><img :src="files[randomNum(0,files.length)]" alt=""></div>
             <div class="content">
                 <div class="title">{{item.title}}</div>
                 <div class="desc">{{item.desc}}</div>
