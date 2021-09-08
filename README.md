@@ -11,10 +11,14 @@ Rookie CLI 主要用于开发自己的 Vue 项目时，省去搭建项目的过�
 查看提供的所有命令
 #### create ```<template> <project>``` 初始化项目
 
-```<template>``` 模板，可选：normal
+```<template>``` 模板，可选：normal、vue3
 
 ```<project>```  项目名称
 
 #### add
 
 添加一个新的模板
+
+#### template
+
+查看当前可用模板列表
