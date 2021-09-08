@@ -11,8 +11,8 @@ export async function templateInfo() {
 
 	// 读取根目录下的 template.json
 	const tplObj = require(ROOT_CLI_PATH('template'))
-
+	console.log('\n')
 	Object.keys(tplObj).forEach(name=>{
-        console.log(tplObj)
+        console.log(`${chalk.green(name)} --  ${tplObj[name]}\n`)
     })
 }
